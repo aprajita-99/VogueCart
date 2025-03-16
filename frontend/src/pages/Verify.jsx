@@ -5,6 +5,8 @@ import { useSearchParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import {toast} from 'react-toastify'
 import axios from 'axios'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 const Verify = () => {
     const { navigate, token, setCartItems, backendUrl } = useContext(ShopContext)
     const [searchParams, setSearchParams] = useSearchParams()
@@ -40,6 +42,8 @@ const Verify = () => {
 
     return (
         <div>
+            <Navbar/>
+            <Footer/>
 
         </div>
     )

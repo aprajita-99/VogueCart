@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import AdminLogin from './pages/AdminLogin'
 import Collection from './pages/Collection'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -18,9 +19,8 @@ import Verify from './pages/Verify'
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className="px-2 sm:px-[2vw] md:px-[3vw] lg:px-[4vw]">
       <ToastContainer />
-      <Navbar />
       <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -33,8 +33,8 @@ const App = () => {
         <Route path='/place-order' element={<PlaceOrder />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/verify' element={<Verify />} />
+        <Route path='/adminLogin/*' element = {<AdminLogin/>}/>
       </Routes>
-      <Footer />
     </div>
   )
 }

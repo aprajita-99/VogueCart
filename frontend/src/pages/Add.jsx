@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {assets} from '../assets/assets'
 import axios from 'axios'
-import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
 
 const Add = ({token}) => {
+  const backendUrl = "https://voguecart-backend.onrender.com";
 
   const [image1,setImage1] = useState(false)
   const [image2,setImage2] = useState(false)

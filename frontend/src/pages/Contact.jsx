@@ -2,9 +2,13 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsletterBox from '../components/NewsletterBox'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Contact = () => {
   return (
+    <>
+    <Navbar/>
     <div>
       
       <div className='text-center text-2xl pt-10 border-t'>
@@ -25,6 +29,8 @@ const Contact = () => {
 
       <NewsletterBox/>
     </div>
+    <Footer/>
+    </>
   )
 }
 

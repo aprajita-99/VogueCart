@@ -40,6 +40,8 @@ const Orders = () => {
   },[token])
 
   return (
+    <>
+    <Navbar/>
     <div className='border-t pt-16'>
 
         <div className='text-2xl'>
@@ -75,6 +77,8 @@ const Orders = () => {
             }
         </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

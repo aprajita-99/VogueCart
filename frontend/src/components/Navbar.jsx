@@ -4,25 +4,18 @@ import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
-
     const [visible,setVisible] = useState(false);
-
     const {setShowSearch , getCartCount , navigate, token, setToken, setCartItems} = useContext(ShopContext);
-
     const logout = () => {
         navigate('/login')
         localStorage.removeItem('token')
         setToken('')
         setCartItems({})
     }
-
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
-      
       <Link to='/'><img src={assets.logo} className='w-36' alt="" /></Link>
-
       <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
-        
         <NavLink to='/' className='flex flex-col items-center gap-1'>
             <p>HOME</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
@@ -39,6 +32,11 @@ const Navbar = () => {
             <p>CONTACT</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
         </NavLink>
+        <NavLink to='/adminLogin' className='flex flex-col items-center gap-1'>
+            <p>Admin</p>
+            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
+        </NavLink>
+        
 
       </ul>
 
@@ -75,6 +73,7 @@ const Navbar = () => {
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
+                    <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/adminLogin'>Admin</NavLink>
                 </div>
         </div>
 

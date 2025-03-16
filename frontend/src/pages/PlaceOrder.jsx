@@ -5,6 +5,7 @@ import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import Navbar from '../components/Navbar'
 const PlaceOrder = () => {
 
     const [method, setMethod] = useState('cod');
@@ -114,6 +115,8 @@ const PlaceOrder = () => {
 
 
     return (
+        <>
+        <Navbar/>
         <form onSubmit={onSubmitHandler} className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
             <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
 
@@ -162,6 +165,7 @@ const PlaceOrder = () => {
                 </div>
             </div>
         </form>
+        </>
     )
 }
 export default PlaceOrder

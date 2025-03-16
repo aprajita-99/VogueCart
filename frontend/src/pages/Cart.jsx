@@ -3,6 +3,8 @@ import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title';
 import { assets } from '../assets/assets';
 import CartTotal from '../components/CartTotal';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const Cart = () => {
 
@@ -30,6 +32,8 @@ const Cart = () => {
   }, [cartItems, products])
 
   return (
+    <>
+    <Navbar/>
     <div className='border-t pt-14'>
 
       <div className=' text-2xl mb-3'>
@@ -73,6 +77,8 @@ const Cart = () => {
       </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import Navbar from '../components/Navbar';
 
 const Login = () => {
 
@@ -51,6 +52,8 @@ const Login = () => {
   },[token])
 
   return (
+    <>
+    <Navbar/>
     <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
         <div className='inline-flex items-center gap-2 mb-2 mt-10'>
             <p className='prata-regular text-3xl'>{currentState}</p>
@@ -69,6 +72,7 @@ const Login = () => {
         </div>
         <button className='bg-black text-white font-light px-8 py-2 mt-4'>{currentState === 'Login' ? 'Sign In' : 'Sign Up'}</button>
     </form>
+    </>
   )
 }
 

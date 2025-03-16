@@ -2,9 +2,13 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsletterBox from '../components/NewsletterBox'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 const About = () => {
   return (
+    <>
+    <Navbar/>
     <div>
 
       <div className='text-2xl text-center pt-8 border-t'>
@@ -42,6 +46,8 @@ const About = () => {
 
       <NewsletterBox/>
     </div>
+    <Footer/>
+    </>
   )
 }
 export default About
