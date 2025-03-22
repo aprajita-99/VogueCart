@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/782457f0-d64b-4a80-b9b2-0384b9e5591f)# VogueCart
+# VogueCart
 VogueCart is an e-commerce website designed to provide a seamless shopping experience for users and powerful management tools for admins.
 ---
 
